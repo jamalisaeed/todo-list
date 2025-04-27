@@ -124,11 +124,12 @@ function renderTasks() {
             </span>
         `;
         cell2.innerHTML = task.description ? `<span class="task-desc">${task.description}</span>` : '';
+        cell3.className = 'actions';
         cell3.innerHTML = `
             <button class="complete-btn" data-task-id="${task.id}">
-                ${task.completed ? 'Undo' : 'Complete'}
+                ${task.completed ? '<i class=\'fas fa-undo\'></i>' : '<i class=\'fas fa-check\'></i>'}
             </button>
-            <button class="delete-btn" data-task-id="${task.id}">Delete</button>
+            <button class="delete-btn" data-task-id="${task.id}"><i class=\'fas fa-trash\'></i></button>
         `;
     });
 }
